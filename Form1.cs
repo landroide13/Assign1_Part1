@@ -35,12 +35,12 @@ namespace part1
             {
                 String[] AUCity = { "Camberra", "Sydney", "Perth" };
 
-                comboBox1.Items.AddRange(City);
+                comboBox1.Items.AddRange(AUCity);
             }
             else
             {
                 String[] NZCity = { "Wellington", "Hamilton", "Taupo" };
-                comboBox1.Items.AddRange(City);
+                comboBox1.Items.AddRange(NZCity);
             }
 
         }
