@@ -31,25 +31,27 @@ namespace part1
 
             string selItem = listBox1.SelectedItem.ToString();
 
-            if(selItem == "Australia")
+            for (int x = 0; x < listBox1.Items.Count; x++)
             {
+                if (selItem == "Australia")
+                {
                 String[] AUCity = { "Camberra", "Sydney", "Perth" };
-
                 comboBox1.Items.AddRange(AUCity);
-            }
-            else
-            {
+                }
+                else
+                {
                 String[] NZCity = { "Wellington", "Hamilton", "Taupo" };
                 comboBox1.Items.AddRange(NZCity);
+                }
             }
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e){}
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show(textBox1.Text + "lives in " + listBox1.SelectedItem.ToString() + " , " + comboBox1.SelectedItem.ToString());
+            string name = textBox1.Text;
+            MessageBox.Show(name + " lives in " + listBox1.SelectedItem.ToString() + " , " + comboBox1.SelectedItem.ToString());
         }
 
 
