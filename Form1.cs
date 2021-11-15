@@ -26,17 +26,26 @@ namespace part1
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           String[] Country = { "New Zealand", "Australia" };
-           comboBox2.Items.AddRange(Country);
+           listBox1.Items.insert(0, "New Zealand");
+           listBox1.Items.insert(1, "Australia");
+
+            string selItem = listBox1.SelectedItem.ToString();
+
+            if(selItem == "Australia")
+            {
+                String[] AUCity = { "Camberra", "Sydney", "Perth" };
+
+                comboBox1.Items.AddRange(City);
+            }
+            else
+            {
+                String[] NZCity = { "Wellington", "Hamilton", "Taupo" };
+                comboBox1.Items.AddRange(City);
+            }
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            String[] City = { "Wellington", "Hamilton", "Taupo" };
-            comboBox1.Items.AddRange(City);
-        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e){}
 
         private void button1_Click(object sender, System.EventArgs e)
         {
