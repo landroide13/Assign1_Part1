@@ -24,21 +24,23 @@ namespace part1
             
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           String[] City = { "Wellington", "Hamilton", "Taupo" };
-            comboBox1.Items.AddRange(City);
+           String[] Country = { "New Zealand", "Australia" };
+           comboBox2.Items.AddRange(Country);
+
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String[] Country = { "New Zealand", "Australia" };
-            comboBox2.Items.AddRange(Country);
+
+            String[] City = { "Wellington", "Hamilton", "Taupo" };
+            comboBox1.Items.AddRange(City);
         }
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show(textBox1.Text + "lives in " + comboBox1.SelectedItem.ToString() + " , " + comboBox2.SelectedItem.ToString());
+            MessageBox.Show(textBox1.Text + "lives in " + listBox1.SelectedItem.ToString() + " , " + comboBox1.SelectedItem.ToString());
         }
 
 
