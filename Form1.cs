@@ -17,32 +17,28 @@ namespace part1
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e){}
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
             
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
            String[] City = { "Wellington", "Hamilton", "Taupo" };
             comboBox1.Items.AddRange(City);
         }
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             String[] Country = { "New Zealand", "Australia" };
-            comboBox3.Items.AddRange(Country);
+            comboBox2.Items.AddRange(Country);
         }
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show("Input combo1 lives in " + comboBox2.SelectedItem.ToString() + " , " + comboBox3.SelectedItem.ToString());
+            MessageBox.Show(textBox1.Text + "lives in " + comboBox1.SelectedItem.ToString() + " , " + comboBox2.SelectedItem.ToString());
         }
 
 
